@@ -3,9 +3,14 @@
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        private string _deviceToken;
         public MainPage()
         {
             InitializeComponent();
+            if (Preferences.ContainsKey("DeviceToken"))
+            {
+                _deviceToken = Preferences.Get("DeviceToken", "");
+            }
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -17,7 +22,7 @@
             else
                 CounterBtn.Text = $"Clicked {count} times";
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            SemanticScreenReader.Announce(_deviceToken);
         }
     }
 
