@@ -1,9 +1,13 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Gms.Extensions;
 using Android.OS;
+using Android.Util;
 using AndroidX.Core.App;
 using AndroidX.Core.Content;
+using Firebase;
+using Firebase.Messaging;
 
 namespace MAUIPushNotification
 {
@@ -16,10 +20,13 @@ namespace MAUIPushNotification
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
             if (ContextCompat.CheckSelfPermission(this, Android.Manifest.Permission.PostNotifications) == Permission.Denied)
             {
                 ActivityCompat.RequestPermissions(this, new String[] { Android.Manifest.Permission.PostNotifications }, 1);
             }
+            FirebaseApp.InitializeApp(this);
+
             CreateNotificationChannel();
         }
 
