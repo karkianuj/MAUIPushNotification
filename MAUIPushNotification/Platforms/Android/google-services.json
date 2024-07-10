@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "921931367573",
+    "project_id": "mauipushnotification-8591d",
+    "storage_bucket": "mauipushnotification-8591d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921931367573:android:3726daa2a121ec497fc79c",
+        "android_client_info": {
+          "package_name": "com.companyname.mauipushnotification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvRC8I4qoyj6UPEx7TqqslkOpAYITBB54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
